@@ -21,10 +21,7 @@ export async function handleSubmit(
 
   try {
     console.log("employeeData", employeeData);
-    // Use Redux async thunk to add employee to localStorage
     await dispatch(addEmployeeToStorage(employeeData)).unwrap();
-
-    // If successful, open the modal
     onOpenModal();
   } catch (error) {
     console.log("error", error);
