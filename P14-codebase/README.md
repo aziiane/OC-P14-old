@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# HRnet - Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application moderne de gestion des employés développée avec React et TypeScript.
 
-Currently, two official plugins are available:
+## 🚀 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Création d'employés** : Formulaire complet pour ajouter de nouveaux employés
+- **Liste des employés** : Affichage et consultation des employés existants.
+- **Gestion d'état** : Redux Toolkit pour la gestion des données
+- **Interface moderne** : Utilisation de la librairie Material-UI
+- **[Modal personnalisée](https://www.npmjs.com/package/my-react-modal-oc-p14)** : Integration d'une librairie de modal personnalisée
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - Framework JavaScript
+- **TypeScript** - Typage en JavaScript
+- **Redux Toolkit** - Gestion d'état
+- **Material-UI** - Composants UI (DataGrid, DatePicker)
+- **React Router** - Navigation
+- **Styled Components** - Styling CSS-in-JS
+- **Date-fns** - Manipulation des dates
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. Clonez le repository :
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone git@github.com:aziiane/OC-P14.git
+cd P14-codebase
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Installez les dépendances :
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Lancez l'application en mode développement :
+
+```bash
+npm run dev
+```
+
+4. Ouvrez [http://localhost:5173](http://localhost:5173) dans votre navigateur
+
+## 📁 Structure du projet
+
+```
+src/
+├── assets/          # Ensemble d'icones
+├── components/      # Composants réutilisables
+├── constants/       # Constantes de l'application
+├── lib/             # Utilitaires et helpers
+├── pages/           # Pages de l'application
+├── store/           # Configuration Redux
+├── styles/          # Fichiers CSS modules
+├── main.tsx         # Fichier principale pour les providers et routage
 ```
